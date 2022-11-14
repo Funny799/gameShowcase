@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="../favicon.ico" />
+  <link rel="stylesheet" href="../styles.css" type="text/css">
+  <title id="main">个人游戏展柜-</title>
+</head>
+<script src="../base.js" type="text/javascript"></script>
+<script type="text/javascript">
+  const thisid = 239140;
+  let i1 = 0;
+  let i2 = -1;
+  function click(id){
+    switch (id) {
+      case 0:ss.innerHTML = ssimgs[0];i1=0;break;
+      case 1:ss.innerHTML = ssimgs[1];i1=1;break;
+      case 2:ss.innerHTML = ssimgs[2];i1=2;break;
+      case 3:ss.innerHTML = ssimgs[3];i1=3;break;
+      case 4:ss.innerHTML = ssimgs[4];i1=4;break;
+      case 5:ss.innerHTML = ssimgs[5];i1=5;break;
+    }
+    let j;
+    for (j=0;j<ssimgs.length;j++){
+      document.getElementById("ss"+j).style.backgroundColor="";
+    }
+    document.getElementById("ss"+id).style.backgroundColor="#4c6b22";
+  }
+  function mouseover(id) {
+    i2 = id;
+    let j;
+    for (j=0;j<ssimgs.length;j++){
+      document.getElementById("ss"+j).style.backgroundColor="";
+    }
+    document.getElementById("ss"+i1).style.backgroundColor="#4c6b22";
+    document.getElementById("ss"+id).style.backgroundColor="#4c6b22";
+  }
+  function rolling(){
+    i1++;
+    i1%=ssimgs.length;
+    switch (i1) {
+      case 0:click(0);break;
+      case 1:click(1);break;
+      case 2:click(2);break;
+      case 3:click(3);break;
+      case 4:click(4);break;
+      case 5:click(5);break;
+    }
+    document.getElementById("ss"+i2).style.backgroundColor="#4c6b22";
+  }
+  setInterval(rolling,2000);
+</script>
+<body class="bgSettings" onload="loadItemPages(thisid)">
+<table class="bgSettings" width="100%">
+  <tr><td>
+    <hr align="center" color="#4c6b22">
+    <table align="center" width="60%" border="0" cellpadding="0" cellspacing="0" style="">
+      <tr style="color: #00aff4">
+        <td width="100" align="center">
+          <a href="https://steamcommunity.com/profiles/76561198367477270/" style="color: #00aff4">我的Steam</a>
+        </td>
+        <td width="100" align="center">
+          <a href="../index.html" style="color: #00aff4;font-size: x-large">展柜主页</a>
+        </td>
+        <td width="100" align="center">
+          <a href="../about.html" style="color: #00aff4">网页介绍</a>
+        </td>
+      </tr>
+    </table>
+    <hr align="center" color="#4c6b22">
+  </td></tr>
+</table>
+<div id="maindiv" class="pageBG">
+  <table align="center" width="80%">
+    <tr id="index" style="background-color: #414860"></tr>
+    <tr align="center">
+      <td><table style="background-color: #414860" width="100%">
+        <tr><div id="ss"></div></tr>
+        <tr valign="middle" align="center" style="background-color: #414860">
+          <td id="ss0" onmouseover="mouseover(0)" onmouseout="mouseover(-1)"></td>
+          <td id="ss1" onmouseover="mouseover(1)" onmouseout="mouseover(-1)"></td>
+          <td id="ss2" onmouseover="mouseover(2)" onmouseout="mouseover(-1)"></td>
+          <td id="ss3" onmouseover="mouseover(3)" onmouseout="mouseover(-1)"></td>
+          <td id="ss4" onmouseover="mouseover(4)" onmouseout="mouseover(-1)"></td>
+          <td id="ss5" onmouseover="mouseover(5)" onmouseout="mouseover(-1)"></td>
+        </tr>
+      </table></td>
+      <td valign="top"><table>
+        <tr><td align="center" id="item_title" style="background-color: #414860"></td></tr>
+        <tr><td align="center" id="item_cover"></td></tr>
+        <tr><td align="center" id="item_score" style="background-color: #414860"></td></tr>
+        <tr><td id="item_description" style="background-color: #414860"></td></tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td id="item_achievement" style="background-color: #414860"></td>
+      <td id="item_time" style="background-color: #414860"></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>

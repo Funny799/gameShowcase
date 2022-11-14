@@ -1,0 +1,48 @@
+.bgSettings{
+    background-color: #161820;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size:100%;
+}
+.index{
+    color: #afafaf;
+    font-style: italic;
+    font-size: x-small;
+    display: inline-block;
+}
+.title{
+    text-decoration: none;
+    font-size: x-large;
+    color: #FFFFFF;
+}
+img.header{
+    width: 230px;
+}
+img.cover{
+    width: 200px;
+}
+div.description{
+    color: #FFFFFF;
+    font-size: small;
+    font-style: italic
+}
+div.about{
+    color: #FFFFFF;
+    font-size: large;
+    font-style: italic
+}
+div.pageBG{
+    background-color: #161820;
+    background-repeat:no-repeat;
+    background-size:100%;
+    position: absolute;
+    width: 98.9%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.bottom{
+    color: gray;
+    font-size: x-small;
+    font-style: italic
+}
