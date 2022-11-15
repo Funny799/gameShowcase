@@ -31,7 +31,7 @@ function searchItem(search){
     items.innerHTML = "";
     var flag = 0;
     for (i=0;i<size;i++){
-        if (title[i].search(search)!==-1) {
+        if (item[i].title.search(search)!==-1) {
             flag++;
             showItems(i);
         }
